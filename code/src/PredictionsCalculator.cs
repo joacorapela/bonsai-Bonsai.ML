@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reactive.Linq;
 using MathNet.Numerics.LinearAlgebra;
 
-namespace OnlineBayesianLinearRegression
+namespace Bonsai.ML.OnlineBayesianLinearRegression
 {
     [Combinator]
     [Description("")]

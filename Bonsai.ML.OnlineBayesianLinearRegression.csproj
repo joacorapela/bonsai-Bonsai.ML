@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Title>OnlineBayesianLinearRegression</Title>
+    <Title>Bonsai.ML.OnlineBayesianLinearRegression</Title>
     <Description>A Bonsai package for online Bayesian linear regression.</Description>
     <Authors></Authors>
     <Copyright>Copyright ©  2024</Copyright>

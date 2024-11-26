@@ -7,21 +7,20 @@ using MathNet.Numerics.LinearAlgebra;
 using System.Xml.Serialization;
 using System.Globalization;
 
-namespace OnlineBayesianLinearRegression
+namespace Bonsai.ML.OnlineBayesianLinearRegression
 {
     [Combinator]
     [Description("")]
     [WorkflowElementCategory(ElementCategory.Transform)]
     public class PosteriorCalculator
     {
-        // [TypeConverter(typeof(UnidimensionalArrayConverter))]
+        [TypeConverter(typeof(UnidimensionalArrayConverter))]
         public double[] m0 { get; set; }
 
-        // [XmlIgnore]
-        // [TypeConverter(typeof(MultidimensionalArrayConverter))]
+        [XmlIgnore]
+        [TypeConverter(typeof(MultidimensionalArrayConverter))]
         public double[,] S0 { get; set; }
 
-	/*
         [Browsable(false)]
         [XmlElement("S0")]
         [EditorBrowsable(EditorBrowsableState.Never)]
@@ -30,7 +29,6 @@ namespace OnlineBayesianLinearRegression
             get { return ArrayConvert.ToString(S0, CultureInfo.InvariantCulture); }
             set { S0 = (double[,])ArrayConvert.ToArray(value, 2, typeof(double), CultureInfo.InvariantCulture); }
         }
-	*/
 
         public double priorPrecision { get; set; }
 
