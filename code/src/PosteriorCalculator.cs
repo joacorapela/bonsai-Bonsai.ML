@@ -7,7 +7,7 @@ using MathNet.Numerics.LinearAlgebra;
 using System.Xml.Serialization;
 using System.Globalization;
 
-namespace Bonsai.ML.OnlineBayesianLinearRegression
+namespace JoacoRapela.Bonsai.ML.OnlineBayesianLinearRegression
 {
     [Combinator]
     [Description("")]
