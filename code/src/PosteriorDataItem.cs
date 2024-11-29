@@ -1,9 +1,11 @@
 using System;
 using MathNet.Numerics.LinearAlgebra;
 
-public class PosteriorDataItem
+namespace JoacoRapela.Bonsai.ML.OnlineBayesianLinearRegression
 {
-    public Vector<double> mn;
-    public Matrix<double> Sn;
+    public class PosteriorDataItem
+    {
+        public Vector<double> mn;
+        public Matrix<double> Sn;
+    }
 }
-
