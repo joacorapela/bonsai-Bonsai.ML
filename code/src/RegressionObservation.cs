@@ -1,8 +1,10 @@
 using MathNet.Numerics.LinearAlgebra;
 
-public class RegressionObservation
+namespace JoacoRapela.Bonsai.ML.OnlineBayesianLinearRegression
 {
-    public Vector<double> phi;
-    public double t;
+    public class RegressionObservation
+    {
+        public Vector<double> phi;
+        public double t;
+    }
 }
-
