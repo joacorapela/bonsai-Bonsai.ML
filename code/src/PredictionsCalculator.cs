@@ -5,14 +5,14 @@ using System.Linq;
 using System.Reactive.Linq;
 using MathNet.Numerics.LinearAlgebra;
 
-namespace Bonsai.ML.OnlineBayesianLinearRegression
+namespace JoacoRapela.Bonsai.ML.OnlineBayesianLinearRegression
 {
     [Combinator]
     [Description("")]
     [WorkflowElementCategory(ElementCategory.Transform)]
     public class PredictionsCalculator
     {
-        public double beta { get; set; }
+        public double likePrecision { get; set; }
 
         public IObservable<ValueTuple<double, double>> Process(IObservable<Tuple<Vector<double>, PosteriorDataItem>> source)
         {
@@ -24,7 +24,7 @@ namespace Bonsai.ML.OnlineBayesianLinearRegression
                     phi: phiAndPDI.Item1,
                     mn: phiAndPDI.Item2.mn,
                     Sn: phiAndPDI.Item2.Sn,
-                    beta: this.beta
+                    beta: this.likePrecision
                 );
 
                 // Convert Tuple to ValueTuple
